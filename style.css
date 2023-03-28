@@ -50,10 +50,10 @@ main {
 
 picture {
   position: relative;
+  display: block;
 }
 
-.overlay::after {
-  content: "";
+.overlay {
   background-color: rgba(117, 9, 167, 0.45);
   width: 100%;
   height: 100%;
