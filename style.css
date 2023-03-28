@@ -1,0 +1,145 @@
+:root {
+  --main-bg: rgb(9, 11, 26);
+  --card-bg: rgb(27, 25, 56);
+  --white: rgb(255, 255, 255);
+  --soft-violet: rgb(170, 92, 219);
+  --main-para: rgba(255, 255, 255, 0.75);
+  --stats-para: rgba(255, 255, 255, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg);
+}
+
+main {
+  padding: 2em;
+}
+
+.ctnr-main-card {
+  max-width: 327px;
+  background-color: var(--card-bg);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.sections.right {
+  padding: 3.9em 3.4em 0.8em 3.4em;
+}
+
+.header-img {
+  display: block;
+  width: 100%;
+}
+
+picture {
+  position: relative;
+}
+
+.overlay::after {
+  content: "";
+  background-color: rgba(117, 9, 167, 0.45);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.title-main {
+  margin-bottom: 0.607em;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  line-height: 115.5%;
+}
+
+.txt-highlight {
+  color: var(--soft-violet);
+}
+
+.dsecription {
+  color: var(--main-para);
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 165%;
+}
+
+.ctnr-stats {
+  margin-top: 3.3em;
+}
+
+.ctnr-stat-item {
+  margin-bottom: 2.2em;
+}
+
+.stats-name,
+.stats-figure {
+  text-align: center;
+  line-height: 160%;
+}
+
+.stats-figure {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.stats-name {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--stats-para);
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .sections.right {
+    flex-basis: 51.22%;
+    padding: 7em 12em 6.2em 7em;
+  }
+
+  .ctnr-main-card {
+    max-width: 1109px;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 1em;
+  }
+
+  .ctnr-main-card * {
+    text-align: left;
+  }
+
+  .title-main {
+    font-size: 3.6rem;
+    margin-bottom: 0.75em;
+  }
+
+  .dsecription {
+    line-height: 160%;
+  }
+
+  .ctnr-stats {
+    margin-top: 6.8em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ctnr-stat-item {
+    margin-bottom: 0;
+  }
+} ;
